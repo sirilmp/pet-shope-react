@@ -1,5 +1,8 @@
 import React from "react";
 import useClipboard from "react-use-clipboard";
+import Aos from "aos";
+import "aos/dist/aos.css"
+Aos.init({ once: true})
 
 function Contact() {
 
@@ -20,7 +23,7 @@ function Contact() {
         </h1>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center mt-6 mb-20">
-        <div className="">
+        <div data-aos="fade-up"  data-aos-duration="2000">
           <div className="max-w-md  mx-auto mb-10 flex items-center">
             {/* whats app icon with hover effects */}
             <div className="copy_icon">
@@ -93,7 +96,7 @@ function Contact() {
          
           </div>
         </div>
-        <div className="md:bg-gray-800 w-full p-1 md:p-0 md:w-1/2 md:ml-5 h-72 rounded-2xl">
+        <div data-aos="fade-left"  data-aos-duration="2000" className="md:bg-gray-800 w-full p-1 md:p-0 md:w-1/2 md:ml-5 h-72 rounded-2xl">
           <iframe title='location'
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31186.407930541598!2d75.32735078392618!3d12.295505696041236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba45df42f6550ab%3A0xaa8ae0c49c4a98e5!2sKadumeni%2C%20Kerala%20670511!5e0!3m2!1sen!2sin!4v1626659090902!5m2!1sen!2sin"
             className="w-full h-full rounded-2xl md:transform md:translate-x-3 md:translate-y-3"

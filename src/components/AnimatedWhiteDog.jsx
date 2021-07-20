@@ -1,7 +1,11 @@
 import React from 'react'
+import Aos from "aos";
+import "aos/dist/aos.css";
+Aos.init();
+
 function AnimatedWhiteDog() {
     return (
-     <div className='white_dog_animation_1'>
+     <div className='white_dog_animation_1' data-aos="fade-right">
  <div  className="white_dog_animation dog">
       <div  className="white_dog_animation dog-body">
         <div  className="white_dog_animation dog-tail">

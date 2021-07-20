@@ -1,7 +1,5 @@
-import Aos from "aos";
 import React from "react";
-import "aos/dist/aos.css"
-Aos.init()
+
 
 function About() {
   return (

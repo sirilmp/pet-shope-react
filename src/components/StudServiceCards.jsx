@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import firebase from "./Firebase";
 import StudServiceCard from "./StudServiceCard";
+import Aos from "aos";
+import "aos/dist/aos.css"
+Aos.init({ once: true})
+
 
 function StudServiceCards() {
   const [displayData, setDisplayData] = useState([]);
@@ -37,7 +41,10 @@ function StudServiceCards() {
   }, []);
 
   return (
-    <div id="services" className="pt-16 mt-1">
+    <div id="services" className="pt-16 mt-1"
+    data-aos="fade-up"
+    data-aos-duration="3000"
+    >
       <div className="text-gray-700 flex w-full items-center overflow-hidden relative pl-4">
         <h1 className="heading_font font-bold text-2xl mb-5">
           Stud Services{" "}

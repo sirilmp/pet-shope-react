@@ -3,6 +3,10 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import firebase, { storage } from "./Firebase";
 import useClipboard from "react-use-clipboard";
+import Aos from "aos";
+import "aos/dist/aos.css"
+Aos.init({ once: true})
+
 
 function ProductSellCard({ productsDetails }) {
   //console.log(productsDetails);
@@ -35,7 +39,10 @@ function ProductSellCard({ productsDetails }) {
   });
 
   return (
-    <div className="ml-2 rounded-2xl bg-gray-800 ">
+    <div className="ml-2 rounded-2xl bg-gray-800 "
+    data-aos="fade-up"
+    data-aos-duration="3000"
+    >
       <div className="bg-gray-900 rounded-2xl hover:-translate-y-2 transform duration-200 hover:shadow-xl text-gray-700 main_font">
         <div
           className="w-72 h-56 bg-gray-500 group overflow-hidden rounded-lg"

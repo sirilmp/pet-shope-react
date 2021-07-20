@@ -219,7 +219,7 @@ function Banner() {
 
 
         {/* banner text */}
-        <div data-aos="flip-left">
+        <div data-aos="fade-up">
           <h1 className="md:text-left lg:text-6xl text-5xl font-extrabold banner_main_font text-gray-300 text-center pt-72 p-5 leading-normal">
             buy your <span className="text-gray-800 underline">perfect</span> one
           </h1>

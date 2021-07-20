@@ -3,6 +3,10 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import firebase, { storage } from "./Firebase";
 import useClipboard from "react-use-clipboard";
+import Aos from "aos";
+import "aos/dist/aos.css"
+Aos.init({ once: true})
+
 
 function StudServiceCard({ studDogDetails }) {
   const admin = useSelector(selectUser);
@@ -33,7 +37,10 @@ function StudServiceCard({ studDogDetails }) {
   });
 
   return (
-    <div className="ml-2 mb-20 rounded-2xl bg-gray-800 ">
+    <div className="ml-2 mb-20 rounded-2xl bg-gray-800 "
+    data-aos="fade-up"
+    data-aos-duration="3000"
+    >
       <div className="bg-gray-900 rounded-2xl hover:shadow-lg text-gray-700 main_font transform duration-200 hover:-translate-y-2">
         <div
           className="w-72 h-56 bg-gray-500 group overflow-hidden rounded-lg"
