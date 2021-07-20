@@ -15,7 +15,7 @@ import StudServices from './pages/add-products/StudServicesAdd';
 
 
 function App() {
-
+console.log(process.env);
 
 const dispatch = useDispatch()
 
