@@ -3,7 +3,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="bg-gray-900 text-gray-700">
+    <div className="dark:bg-gray-900 bg-gray-100 text-gray-700 z-0">
        <div className='flex w-full items-center overflow-hidden relative pl-4'>
        <h1 className="heading_font font-bold text-3xl mb-5">
           About <span className='w-full md:w-1/2 h-0.5 mt-4 ml-3  absolute bg-gray-700'></span>

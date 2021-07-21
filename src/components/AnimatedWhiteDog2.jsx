@@ -6,7 +6,7 @@ Aos.init({ once: true})
 function AnimatedWhiteDog2() {
     return (
         <div className='white_animated_dog_2'
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-duration="3000"
         >
             <div className="animated-dog-run">

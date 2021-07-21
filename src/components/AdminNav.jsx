@@ -26,12 +26,12 @@ const logout=(e)=>{
 }
 
   return (
-    <div className='flex justify-end bg-gray-900 p-2 z-50 top-0 sticky'>
-      <h1 onClick={home} className='ml-2 mr-2 p-2 font-mono text-gray-800 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-800 bg-gray-500 rounded-md border border-gray-500 transform duration-200'>Home</h1>
-      <h1 onClick={addPuppies} className='ml-2 mr-2 p-2 font-mono text-gray-800 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-800 bg-gray-500 rounded-md border border-gray-500 transform duration-200'>Add Puppies</h1>
-      <h1 onClick={addProduct} className='ml-2 mr-2 p-2 font-mono text-gray-800 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-800 bg-gray-500 rounded-md border border-gray-500 transform duration-200'>Add Products</h1>
-      <h1 onClick={addStudDog} className='ml-2 mr-2 p-2 font-mono text-gray-800 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-800 bg-gray-500 rounded-md border border-gray-500 transform duration-200'>Stud Dog</h1>
-      <h1 onClick={logout} className='ml-2 mr-2 p-2 font-mono text-gray-800 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-800 bg-gray-500 rounded-md border border-gray-500 transform duration-200'>Logout</h1>
+    <div className='flex dark:bg-gray-900 bg-gray-100 p-2 z-50 top-0 sticky overflow-scroll'>
+      <h1 onClick={home} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Home</h1>
+      <h1 onClick={addPuppies} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Add Puppies</h1>
+      <h1 onClick={addProduct} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Add Products</h1>
+      <h1 onClick={addStudDog} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Stud Dog</h1>
+      <h1 onClick={logout} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Logout</h1>
     </div>
   );
 }

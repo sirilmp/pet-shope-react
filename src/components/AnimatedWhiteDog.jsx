@@ -5,7 +5,7 @@ Aos.init();
 
 function AnimatedWhiteDog() {
     return (
-     <div className='white_dog_animation_1' data-aos="fade-right">
+     <div className='white_dog_animation_1'>
  <div  className="white_dog_animation dog">
       <div  className="white_dog_animation dog-body">
         <div  className="white_dog_animation dog-tail">

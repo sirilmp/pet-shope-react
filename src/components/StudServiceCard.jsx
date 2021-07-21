@@ -37,11 +37,11 @@ function StudServiceCard({ studDogDetails }) {
   });
 
   return (
-    <div className="ml-2 mb-20 rounded-2xl bg-gray-800 "
+    <div className="ml-2 mb-20 rounded-2xl dark:bg-gray-800 bg-gray-200"
     data-aos="fade-up"
     data-aos-duration="3000"
     >
-      <div className="bg-gray-900 rounded-2xl hover:shadow-lg text-gray-700 main_font transform duration-200 hover:-translate-y-2">
+      <div className="dark:bg-gray-900 bg-gray-100 rounded-2xl hover:shadow-lg text-gray-700 main_font transform duration-200 hover:-translate-y-2">
         <div
           className="w-72 h-56 bg-gray-500 group overflow-hidden rounded-lg"
           style={{
@@ -52,7 +52,7 @@ function StudServiceCard({ studDogDetails }) {
         >
           <div>
             {studDogDetails.offer_price && (
-              <h1 className="absolute select-none cursor-default bg-gray-900 p-2 -ml-0.5 -mt-0.5 rounded-br-3xl font-bold">
+              <h1 className="absolute select-none cursor-default dark:bg-gray-900 bg-gray-100 p-2 -ml-0.5 -mt-0.5 rounded-br-3xl font-bold">
                 {studDogDetails.actual_price - studDogDetails.offer_price} INR
                 OFF
               </h1>
@@ -108,7 +108,7 @@ function StudServiceCard({ studDogDetails }) {
           <>
             <h1 className="w-72 px-3 pt-1 pb-4">
               Fee:
-              <span className="font-bold line-through select-none cursor-default text-gray-700">
+              <span className="font-bold line-through select-none cursor-default text-gray-400 dark:text-gray-800">
                 {studDogDetails.actual_price}INR
               </span>{" "}
               <span className="font-bold">{studDogDetails.offer_price}INR</span>
@@ -126,13 +126,13 @@ function StudServiceCard({ studDogDetails }) {
               ></i>
               <div className="copy_items hidden relative">
                 <p
-                  className={`bg-gray-500 main_font -mt-77 -ml-10 absolute p-1  rounded-lg w-101 ${
+                  className={`dark:bg-gray-500 dark:text-gray-800 bg-gray-900 text-gray-100 main_font -mt-77 -ml-10 absolute p-1  rounded-lg w-101 ${
                     isCopied && "w-130"
                   }`}
                 >
                   {isCopied ? "number copied !" : "click to copy"}
                 </p>
-                <i className="absolute -mt-61 text-gray-500 text-lg fas fa-sort-down"></i>
+                <i className="absolute -mt-61 dark:text-gray-500 text-gray-900 text-lg fas fa-sort-down"></i>
               </div>
             </div>
 
@@ -140,7 +140,7 @@ function StudServiceCard({ studDogDetails }) {
               onClick={deleteData}
               className="ml-16 mr-16 text-red-400 hover:text-red-600 transform duration-500 cursor-pointer focus:text-gray-700 text-2xl fas fa-trash-alt"
             ></i>
-            <div className="copy_icon z-30">
+            <div className="copy_icon">
               <a
                 href={`https://api.whatsapp.com/send?phone=919496706647&text=*👋 ABIN I want 👇 product*%0a‎Name : *${studDogDetails.dog_name}*,‎Price : *${studDogDetails.actual_price}INR*`}
                 target="_blank"
@@ -149,13 +149,13 @@ function StudServiceCard({ studDogDetails }) {
                 <i className="text-gray-700 hover:text-gray-400 transform duration-500 cursor-pointer focus:text-gray-700 text-4xl fab fa-whatsapp"></i>
               </a>
 
-              <div className="copy_items hidden relative">
+              <div className="copy_items hidden z-9999 relative">
                 <p
-                  className={`bg-gray-500 main_font -mt-20 -ml-14 absolute p-1  rounded-lg w-132`}
+                  className={`dark:bg-gray-500 dark:text-gray-800 bg-gray-900 text-gray-100 main_font -mt-20 -ml-14 absolute p-1  rounded-lg w-132`}
                 >
                   start chat & buy
                 </p>
-                <i className="absolute -mt-16 text-gray-500 ml-3 text-lg fas fa-sort-down"></i>
+                <i className="absolute -mt-16 dark:text-gray-500 text-gray-900 ml-3 text-lg fas fa-sort-down"></i>
               </div>
             </div>
           </>
@@ -169,13 +169,13 @@ function StudServiceCard({ studDogDetails }) {
                 ></i>
                 <div className="copy_items hidden relative">
                   <p
-                    className={`bg-gray-500 main_font -mt-77 -ml-10 absolute p-1  rounded-lg w-101 ${
+                    className={`dark:bg-gray-500 dark:text-gray-800 bg-gray-900 text-gray-100 main_font -mt-77 -ml-10 absolute p-1  rounded-lg w-101 ${
                       isCopied && "w-130"
                     }`}
                   >
                     {isCopied ? "number copied !" : "click to copy"}
                   </p>
-                  <i className="absolute -mt-61 text-gray-500 text-lg fas fa-sort-down"></i>
+                  <i className="absolute -mt-61 dark:text-gray-500 text-gray-900 text-lg fas fa-sort-down"></i>
                 </div>
               </div>
             </>
@@ -191,13 +191,13 @@ function StudServiceCard({ studDogDetails }) {
                 <i className="text-gray-700 hover:text-gray-400 transform duration-500 cursor-pointer focus:text-gray-700 text-4xl fab fa-whatsapp"></i>
               </a>
 
-              <div className="copy_items hidden relative">
+              <div className="copy_items hidden relative ">
                 <p
-                  className={`bg-gray-500 main_font -mt-20 -ml-14 absolute p-1  rounded-lg w-132`}
+                  className={`dark:bg-gray-500 dark:text-gray-800 bg-gray-900 text-gray-100 main_font -mt-20 -ml-14 absolute p-1  rounded-lg w-132`}
                 >
                   start chat & buy
                 </p>
-                <i className="absolute -mt-16 text-gray-500 ml-3 text-lg fas fa-sort-down"></i>
+                <i className="absolute -mt-16 dark:text-gray-500 text-gray-900 ml-3 text-lg fas fa-sort-down"></i>
               </div>
             </div>
           </>

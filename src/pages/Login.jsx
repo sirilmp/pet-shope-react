@@ -94,7 +94,7 @@ setLoading(true)
         //forgot password section closed
         //login section
         <>
-          <h1 className="text-center p-3 mt-10 underline font-semibold font-mono text-xl text-gray-500">
+          <h1 className="text-center p-3 mt-10 underline font-semibold font-mono text-xl dark:text-gray-500 text-gray-800">
             Admin Login
           </h1>
           <form>
@@ -116,14 +116,14 @@ setLoading(true)
             </div>
             <div className="p-2">
               {loading ? (
-         <div className='max-w-xl mx-auto mt-10'>
+         <div className='max-w-xl mx-auto mt-10 text-center'>
          <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
        </div>
               ) : (
                 <button
                   type="submit"
                   onClick={logIn}
-                  className="w-full max-w-xl mx-auto grid bg-gray-800 text-gray-500 p-2 m-6 rounded-md font-semibold font-mono"
+                  className="w-full max-w-xl mx-auto grid dark:bg-gray-800 bg-gray-300 text-gray-600 dark:text-gray-500 p-2 m-6 rounded-md font-semibold font-mono"
                 >
                   Login
                 </button>

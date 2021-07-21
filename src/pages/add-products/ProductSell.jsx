@@ -232,7 +232,7 @@ function ProductSell() {
                 <h1 className="mt-5 relative text-center text-lg font-semibold font-mono text-gray-500 bg-transparent">
                   {progress}%
                 </h1>
-                <div className="max-w-xl bg-gray-800 shadow-lg w-full mx-auto py-1 px-1 rounded-full">
+                <div className="max-w-xl dark:bg-gray-800 bg-gray-400 shadow-lg w-full mx-auto py-1 px-1 rounded-full">
                   <div
                     className="rounded-full animate-pulse"
                     style={{
@@ -246,7 +246,7 @@ function ProductSell() {
             ) : (
               <button
                 type="submit"
-                className="w-full max-w-xl mx-auto grid bg-gray-800 p-2 m-6 rounded-md text-gray-500 font-semibold font-mono"
+                className="w-full max-w-xl mx-auto grid p-2 m-6 rounded-md dark:bg-gray-800 bg-gray-300 text-gray-600 dark:text-gray-500 font-semibold font-mono"
               >
                 ADD
               </button>

@@ -18,7 +18,7 @@ function Home() {
     <div>
       {admin && <AdminNav />}
       <Banner />
-      <div className="-mt-10 bg-gray-900 ">
+      <div className="-mt-10 dark:bg-gray-900 bg-gray-100">
         <AnimatedWhiteDog />
       </div>
       <About />

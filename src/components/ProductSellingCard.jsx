@@ -39,11 +39,11 @@ function ProductSellCard({ productsDetails }) {
   });
 
   return (
-    <div className="ml-2 rounded-2xl bg-gray-800 "
+    <div className="ml-2 rounded-2xl bg-gray-200 dark:bg-gray-800 "
     data-aos="fade-up"
     data-aos-duration="3000"
     >
-      <div className="bg-gray-900 rounded-2xl hover:-translate-y-2 transform duration-200 hover:shadow-xl text-gray-700 main_font">
+      <div className="dark:bg-gray-900 bg-gray-100 rounded-2xl hover:-translate-y-2 transform duration-200 hover:shadow-xl text-gray-700 main_font">
         <div
           className="w-72 h-56 bg-gray-500 group overflow-hidden rounded-lg"
           style={{
@@ -55,16 +55,16 @@ function ProductSellCard({ productsDetails }) {
           <div>
             {productsDetails.offer_price ? (
               <>
-                <h1 className="absolute select-none cursor-default bg-gray-900 p-2 -ml-0.5 -mt-0.5 rounded-br-3xl font-bold">
+                <h1 className="absolute select-none cursor-default dark:bg-gray-900 bg-gray-100 p-2 -ml-0.5 -mt-0.5 rounded-br-3xl font-bold">
                   {productsDetails.actual_price - productsDetails.offer_price}{" "}
                   INR OFF
                 </h1>
-                <div className="bg-gray-900 p-1 select-none cursor-default absolute rounded-br-lg -ml-0.5 font-semibold mt-9">
+                <div className="dark:bg-gray-900 bg-gray-100 p-1 select-none cursor-default absolute rounded-br-lg -ml-0.5 font-semibold mt-9">
                   <h1>{productsDetails.type}</h1>
                 </div>
               </>
             ) : (
-              <div className="bg-gray-900 p-1 -ml-0.5 -mt-0.5 select-none cursor-default absolute rounded-br-lg font-semibold">
+              <div className="dark:bg-gray-900 bg-gray-100 p-1 -ml-0.5 -mt-0.5 select-none cursor-default absolute rounded-br-lg font-semibold">
                 <h1>{productsDetails.type}</h1>
               </div>
             )}
@@ -125,7 +125,7 @@ function ProductSellCard({ productsDetails }) {
           <>
             <h1 className="w-72 px-3 pt-1 pb-4">
               Price:
-              <span className="font-bold line-through cursor-default select-none text-gray-800">
+              <span className="font-bold line-through cursor-default select-none text-gray-400 dark:text-gray-800">
                 {productsDetails.actual_price}INR
               </span>{" "}
               <span className="font-bold">
@@ -146,13 +146,13 @@ function ProductSellCard({ productsDetails }) {
                 ></i>
                 <div className="copy_items hidden relative">
                   <p
-                    className={`bg-gray-500 main_font -mt-77 -ml-10 absolute p-1  rounded-lg w-101 ${
+                    className={`dark:bg-gray-500 bg-gray-900 dark:text-gray-800 text-gray-100 main_font -mt-77 -ml-10 absolute p-1  rounded-lg w-101 ${
                       isCopied && "w-130"
                     }`}
                   >
                     {isCopied ? "number copied !" : "click to copy"}
                   </p>
-                  <i className="absolute -mt-61 text-gray-500 text-lg fas fa-sort-down"></i>
+                  <i className="absolute -mt-61 dark:text-gray-500 text-gray-900 text-lg fas fa-sort-down"></i>
                 </div>
               </div>
             </>
@@ -172,11 +172,11 @@ function ProductSellCard({ productsDetails }) {
 
               <div className="copy_items hidden relative">
                 <p
-                  className={`bg-gray-500 main_font -mt-20 -ml-14 absolute p-1  rounded-lg w-132`}
+                  className={`dark:bg-gray-500 bg-gray-900 dark:text-gray-800 text-gray-100 main_font -mt-20 -ml-14 absolute p-1  rounded-lg w-132`}
                 >
                   start chat & buy
                 </p>
-                <i className="absolute -mt-16 text-gray-500 ml-3 text-lg fas fa-sort-down"></i>
+                <i className="absolute -mt-16 dark:text-gray-500 text-gray-900 ml-3 text-lg fas fa-sort-down"></i>
               </div>
             </div>
           </>
@@ -191,13 +191,13 @@ function ProductSellCard({ productsDetails }) {
                 ></i>
                 <div className="copy_items hidden relative">
                   <p
-                    className={`bg-gray-500 main_font -mt-77 -ml-10 absolute p-1  rounded-lg w-101 ${
+                    className={`dark:bg-gray-500 bg-gray-900 dark:text-gray-800 text-gray-100 main_font -mt-77 -ml-10 absolute p-1  rounded-lg w-101 ${
                       isCopied && "w-130"
                     }`}
                   >
                     {isCopied ? "number copied !" : "click to copy"}
                   </p>
-                  <i className="absolute -mt-61 text-gray-500 text-lg fas fa-sort-down"></i>
+                  <i className="absolute -mt-61 dark:text-gray-500 text-gray-900 text-lg fas fa-sort-down"></i>
                 </div>
               </div>
             </>
@@ -214,11 +214,11 @@ function ProductSellCard({ productsDetails }) {
 
               <div className="copy_items hidden relative">
                 <p
-                  className={`bg-gray-500 main_font -mt-20 -ml-14 absolute p-1  rounded-lg w-132`}
+                  className={`dark:bg-gray-500 bg-gray-900 dark:text-gray-800 text-gray-100 main_font -mt-20 -ml-14 absolute p-1  rounded-lg w-132`}
                 >
                   start chat & buy
                 </p>
-                <i className="absolute -mt-16 text-gray-500 ml-3 text-lg fas fa-sort-down"></i>
+                <i className="absolute -mt-16 dark:text-gray-500 text-gray-900 ml-3 text-lg fas fa-sort-down"></i>
               </div>
             </div>
           </>

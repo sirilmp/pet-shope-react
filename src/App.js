@@ -15,7 +15,7 @@ import StudServices from './pages/add-products/StudServicesAdd';
 
 
 function App() {
-console.log(process.env);
+console.log(localStorage.theme);
 
 const dispatch = useDispatch()
 
@@ -34,7 +34,7 @@ useEffect(() => {
 }, [dispatch])
 
   return (
-    <div className="App">
+    <div className="App dark:bg-gray-900 bg-gray-100 text-gray-900">
       {/* <NavBar/> */}
 
 <Router>

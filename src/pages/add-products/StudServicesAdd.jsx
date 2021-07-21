@@ -17,6 +17,7 @@ function StudServices() {
     const [description, setDescription] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const [uploadError,setUploadError]=useState('')
     const [success, setSuccess] = useState("");
     const [progress, setProgress] = useState(null);
     const history = useHistory();
@@ -71,7 +72,10 @@ function StudServices() {
         //   console.log(progress);
       },
       (error) => {
-        setError(error.message);
+        setUploadError(error.message);
+        setProgress(null);
+        setSuccess("");
+        setError("");
       },
       () => {
         storage
@@ -97,6 +101,7 @@ function StudServices() {
         setDescription('')
         setImage(null);
         setError("");
+        setUploadError('')
         setProgress(null);
         setSuccess("");
         setImagePreview(null)
@@ -119,7 +124,7 @@ function StudServices() {
       </h1>
 
       {success && <p>{success}</p>}
-
+{uploadError && <p className="w-full max-w-xl mx-auto grid bg-red-200 p-2 mt-4 rounded-md text-red-600 font-semibold font-mono">{uploadError}</p>}
       <form onSubmit={addStudDog}>
         <div className="grid md:grid-cols-2 max-w-xl mx-auto gap-4 mt-8 p-2 ">
         <input
@@ -194,7 +199,7 @@ function StudServices() {
                 <h1 className="mt-5 relative text-center text-lg font-semibold font-mono text-gray-500 bg-transparent">
                   {progress}%
                 </h1>
-                <div className="max-w-xl bg-gray-800 shadow-lg w-full mx-auto py-1 px-1 rounded-full">
+                <div className="max-w-xl dark:bg-gray-800 bg-gray-400 shadow-lg w-full mx-auto py-1 px-1 rounded-full">
                   <div
                     className="rounded-full animate-pulse"
                     style={{
@@ -208,7 +213,7 @@ function StudServices() {
             ) : (
               <button
                 type="submit"
-                className="w-full max-w-xl mx-auto grid bg-gray-800 p-2 m-6 rounded-md text-gray-500 font-semibold font-mono"
+                className="w-full max-w-xl mx-auto grid p-2 m-6 rounded-md dark:bg-gray-800 bg-gray-300 text-gray-600 dark:text-gray-500 font-semibold font-mono"
               >
                 ADD
               </button>

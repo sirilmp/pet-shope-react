@@ -40,7 +40,7 @@ function Banner() {
        
         <nav
           className={`nav_animation fixed w-full z-50 text-white ${
-            navBarBg && "bg-gray-900 shadow-lg text-gray-400"
+            navBarBg && "dark:bg-gray-900 bg-gray-100 shadow-lg dark:text-gray-400 text-gray-800"
           }`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -160,14 +160,14 @@ function Banner() {
           >
             {(ref) => (
               <div
-                className={`md:hidden max-w-md mx-auto bg-gray-900 text-center rounded-md ${navBarBg && 'h-screen'}`}
+                className={`md:hidden max-w-md mx-auto dark:bg-gray-900 bg-gray-100 text-center rounded-md ${navBarBg && 'h-screen'}`}
                 id="mobile-menu"
               >
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 main_font">
                   <a
                     href="#home"
                     onClick={() => setIsOpen(!isOpen)}
-                    className="text-gray-400 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-400 font-semibold hover:text-gray-700 block px-3 py-2"
                   >
                   Home
                   </a>
@@ -175,7 +175,7 @@ function Banner() {
                   <a
                     href="#puppies"
                     onClick={() => setIsOpen(!isOpen)}
-                    className="text-gray-400 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-400 font-semibold hover:text-gray-700 block px-3 py-2"
                   >
                   Puppies
                   </a>
@@ -183,7 +183,7 @@ function Banner() {
                   <a
                     href="#products"
                     onClick={() => setIsOpen(!isOpen)}
-                    className="text-gray-400 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-400 font-semibold hover:text-gray-700 block px-3 py-2"
                   >
                     Products
                   </a>
@@ -191,7 +191,7 @@ function Banner() {
                   <a
                     href="#services"
                     onClick={() => setIsOpen(!isOpen)}
-                    className="text-gray-400 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-400 font-semibold hover:text-gray-700 block px-3 py-2"
                   >
                   Services
                   </a>
@@ -207,7 +207,7 @@ function Banner() {
                   <a
                     href="#contact"
                     onClick={() => setIsOpen(!isOpen)}
-                    className="text-gray-400 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-400 font-semibold hover:text-gray-700 block px-3 py-2"
                   >
                   Contact
                   </a>
@@ -227,12 +227,8 @@ function Banner() {
             High breed labrador puppies and stud services.
           </h3>
         </div>
-        <div>
-          <img
-            src="../images/wave.svg"
-            className="flex items-end justify-end max-w-36 opacity-0 sm:opacity-100"
-            alt=""
-          />
+        <div className="flex items-end justify-end max-w-36 opacity-0 sm:opacity-100 ">
+        <svg className='fill-current dark:text-gray-900 text-gray-100' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,32L48,58.7C96,85,192,139,288,170.7C384,203,480,213,576,218.7C672,224,768,224,864,202.7C960,181,1056,139,1152,138.7C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
       </div>
     </>
