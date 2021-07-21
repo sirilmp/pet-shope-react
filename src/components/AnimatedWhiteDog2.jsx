@@ -1,7 +1,5 @@
 import React from 'react'
-import Aos from "aos";
-import "aos/dist/aos.css"
-Aos.init({ once: true})
+
 
 function AnimatedWhiteDog2() {
     return (

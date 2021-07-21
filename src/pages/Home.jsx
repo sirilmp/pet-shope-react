@@ -11,6 +11,10 @@ import ProductSellingCards from "../components/ProductSellingCards";
 import PuppiesSellingCards from "../components/PuppiesSellingCards";
 import StudService from "../components/StudServiceCards";
 import { selectUser } from "../features/userSlice";
+import Aos from "aos";
+import "aos/dist/aos.css"
+Aos.init({ once: true})
+
 
 function Home() {
   const admin = useSelector(selectUser);

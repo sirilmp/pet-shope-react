@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductSellingCard from "./ProductSellingCard";
 import firebase from "./Firebase";
-import Aos from "aos";
-import "aos/dist/aos.css"
-Aos.init({ once: true})
+
 
 
 function ProductSellingCards() {
@@ -49,7 +47,7 @@ function ProductSellingCards() {
     data-aos-duration="3000"
     >
          <div className='text-gray-700 flex w-full items-center overflow-hidden relative pl-4'>
-       <h1 className="heading_font font-bold text-2xl mb-5">
+       <h1 className="heading_font font-bold text-2xl mb-5 select-none">
        Products for Sell <span className='w-full md:w-1/2 h-0.5 mt-4 ml-3  absolute bg-gray-700'></span>
         </h1>
        </div>

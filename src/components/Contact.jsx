@@ -1,8 +1,5 @@
 import React from "react";
 import useClipboard from "react-use-clipboard";
-import Aos from "aos";
-import "aos/dist/aos.css"
-Aos.init({ once: true})
 
 function Contact() {
 
@@ -17,7 +14,7 @@ function Contact() {
   return (
     <div id="contact" className=' text-gray-500 dark:text-gray-600'>
       <div className="text-gray-700 flex w-full items-center overflow-hidden relative pl-4 pt-3">
-        <h1 className="heading_font font-bold text-2xl mb-5">
+        <h1 className="heading_font font-bold text-2xl mb-5 select-none">
           Contact Me
           <span className="w-full md:w-1/2 h-0.5 mt-4 ml-3  absolute bg-gray-700"></span>
         </h1>

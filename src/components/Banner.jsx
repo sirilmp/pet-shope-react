@@ -1,9 +1,6 @@
-import Aos from "aos";
 import React, { useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
 import Scrollspy from 'react-scrollspy'
-import "aos/dist/aos.css";
-Aos.init();
 
 function Banner() {
   const [isOpen, setIsOpen] = useState(false);

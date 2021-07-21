@@ -3,9 +3,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import firebase, { storage } from "./Firebase";
 import useClipboard from "react-use-clipboard";
-import Aos from "aos";
-import "aos/dist/aos.css"
-Aos.init({ once: true})
+
 
 
 function ProductSellCard({ productsDetails }) {

@@ -18,8 +18,8 @@ body::-webkit-scrollbar{
 }
 
 ::selection {
-  color: #111827;
-  background: #374151;
+  color: #fff;
+  background: rgb(108, 116, 129);
 }
 
 code {
