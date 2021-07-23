@@ -22,6 +22,7 @@ function ProductSell() {
   const [success, setSuccess] = useState("");
   const [progress, setProgress] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [timeStamp,setTimeStamp]=useState('')
   const history = useHistory();
   const fileType = ["image/png", "image/jpg", "image/jpeg"];
   const admin = useSelector(selectUser);
@@ -65,8 +66,13 @@ function ProductSell() {
     e.preventDefault();
     setLoading(true);
 
+    const now = new Date().getTime()
+    setTimeStamp(-1*(now))
+    // console.log(now);
+    // console.log(timeStamp);
+
     const uploadTask = storage.ref(`product_images/${dateTime+'-'+image.name}`).put(image);
-    console.log(dateTime+'-'+image.name);
+    //console.log(dateTime+'-'+image.name);
     uploadTask.on(
       "state_change",
       (snapshot) => {
@@ -95,6 +101,7 @@ function ProductSell() {
               offer_price: offerPrice,
               description:description,
               url: url,
+              timeStamp:(-1*(new Date().getTime())),
             };
             data.push(productDetails);
           });

@@ -17,6 +17,12 @@ const addProduct=(e)=>{
 const addStudDog=()=>{
   history.push('/add-stud-dog')
 }
+const uploadImage=()=>{
+  history.push('/upload-image')
+}
+const uploadVideo=()=>{
+  history.push('/upload-video')
+}
 const home=()=>{
   history.push('/')
 }
@@ -26,11 +32,13 @@ const logout=(e)=>{
 }
 
   return (
-    <div className='flex dark:bg-gray-900 bg-gray-100 p-2 z-50 top-0 sticky overflow-scroll'>
+    <div className='flex dark:bg-gray-900 bg-gray-100 p-2 z-50 top-0 sticky overflow-scroll products_scrollbar'>
       <h1 onClick={home} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Home</h1>
       <h1 onClick={addPuppies} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Add Puppies</h1>
       <h1 onClick={addProduct} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Add Products</h1>
       <h1 onClick={addStudDog} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Stud Dog</h1>
+      <h1 onClick={uploadImage} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Upload Image</h1>
+      <h1 onClick={uploadVideo} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Upload Video</h1>
       <h1 onClick={logout} className='ml-2 mr-2 p-2 font-mono dark:text-gray-400 text-gray-500 font-semibold cursor-pointer hover:text-gray-500 hover:bg-gray-700 dark:bg-gray-800 bg-gray-200 rounded-md transform duration-200'>Logout</h1>
     </div>
   );

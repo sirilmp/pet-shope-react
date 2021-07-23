@@ -16,7 +16,7 @@ function StudServiceCard({ studDogDetails }) {
 
   const deleteData = (e) => {
     e.preventDefault();
-    console.log(studDogDetails.key);
+    //console.log(studDogDetails.key);
     let imageRef = storage.refFromURL(studDogDetails.url);
     imageRef.delete();
     firebase.database().ref(`studDogDetails/${studDogDetails.key}`).remove();

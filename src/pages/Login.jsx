@@ -60,9 +60,9 @@ setLoading(true)
             Forgot Password
           </h1>
           <form>
-            <div className="grid md:grid-cols-2 max-w-xl mx-auto gap-4 mt-8 p-2">
+            <div className="grid md:grid-cols-2 max-w-xl mx-auto gap-4 mt-8 p-2 place-items-center">
               <input
-                 className="w-full border-2 border-gray-700 p-2 rounded-md text-gray-500 bg-transparent placeholder-current font-mono font-semibold focus:outline-none focus:shadow-md"
+                 className="w-full h-10 border-2 border-gray-700 p-2 rounded-md text-gray-500 bg-transparent placeholder-current font-mono font-semibold focus:outline-none focus:shadow-md"
                 ref={emailRef}
                 type="text"
                 placeholder="Email id"
@@ -70,17 +70,20 @@ setLoading(true)
               />
               {loading ? (
   
-  <div className='max-w-xl mx-auto mt-10'>
-    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-  </div>
+<></>
             
               ) : (
-              <button onClick={handleForgotPassword} className="w-full max-w-xl mx-auto bg-gray-800 p-2 rounded-md text-gray-500 font-semibold font-mono">
+              <button onClick={handleForgotPassword} className="w-full max-w-xl mx-auto grid dark:bg-gray-800 bg-gray-300 text-gray-600 dark:text-gray-500 p-2 m-6 rounded-md font-semibold font-mono">
                 Submit
               </button>
               )}
             </div>
           </form>
+          {
+            loading &&   <div className='max-w-xl mx-auto mt-10'>
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          </div>
+          }
           <div className="mx-auto mt-3 max-w-xl">
             <p
               onClick={() => setForgotPassword(false)}

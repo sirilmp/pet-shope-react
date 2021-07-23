@@ -12,7 +12,7 @@ function StudServiceCards() {
     setLoading(true);
     firebase
       .database()
-      .ref(`studDogDetails`)
+      .ref(`studDogDetails`).orderByChild("timeStamp")
       .on("value", (snapshot) => {
         let allStudDogs = [];
         snapshot.forEach((snap) => {

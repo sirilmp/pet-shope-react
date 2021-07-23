@@ -99,6 +99,9 @@ background:green !important;
 .-z-10{
   z-index: -10;
 }
+.w-70{
+  width:261px;
+}
 .signature_font{
   font-family: 'Pacifico', cursive;
 }

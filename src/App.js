@@ -12,6 +12,10 @@ import { login, logout } from './features/userSlice';
 import { auth } from './components/Firebase';
 import ProductSell from './pages/add-products/ProductSell';
 import StudServices from './pages/add-products/StudServicesAdd';
+import Gallery from './pages/Gallery';
+import GalleryImageUpload from './pages/add-products/GalleryImageUpload';
+import GalleryVideoUpload from './pages/add-products/GalleryVideoUpload';
+
 
 
 function App() {
@@ -50,8 +54,17 @@ useEffect(() => {
   <Route exact path='/add-products'>
     <ProductSell/>
   </Route>
+  <Route exact path='/upload-image'>
+    <GalleryImageUpload/>
+  </Route>
+  <Route exact path='/upload-video'>
+    <GalleryVideoUpload/>
+  </Route>
   <Route exact path='/add-stud-dog'>
     <StudServices/>
+  </Route>
+  <Route exact path='/gallery'>
+    <Gallery/>
   </Route>
 </Router>
     </div>

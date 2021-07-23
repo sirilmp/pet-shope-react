@@ -11,7 +11,7 @@ function PuppiesSellingCards() {
     setLoading(true);
     firebase
       .database()
-      .ref(`puppiesDetails`)
+      .ref(`puppiesDetails`).orderByChild("timeStamp")
       .on("value", (snapshot) => {
         let allPuppiesData = [];
         snapshot.forEach((snap) => {

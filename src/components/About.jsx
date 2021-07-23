@@ -10,10 +10,10 @@ function About() {
         </h1>
        </div>
       <div className=' max-w-full mx-auto text-center '>
-          <img data-aos="fade-up"
+          {/* <img data-aos="fade-up"
      data-aos-duration="3000"  src="../images/dots.png" className='absolute -left-2 mt-28 md:mt-32' alt="" />
       <img data-aos="fade-up"
-     data-aos-duration="3000"  src="../images/dots.png" className='absolute right-52 -mt-28' alt="" />
+     data-aos-duration="3000"  src="../images/dots.png" className='absolute right-52 -mt-28' alt="" /> */}
         <h6 >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
           inventore aliquid voluptatibus facilis voluptates perferendis odio

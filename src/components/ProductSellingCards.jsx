@@ -12,7 +12,7 @@ function ProductSellingCards() {
     setLoading(true);
     firebase
       .database()
-      .ref(`productDetails`)
+      .ref(`productDetails`).orderByChild("timeStamp")
       .on("value", (snapshot) => {
         let allPuppiesData = [];
         snapshot.forEach((snap) => {
@@ -54,9 +54,7 @@ function ProductSellingCards() {
 
       {loading ? (
         <>
-      <div className='m-2 flex justify-center mb-8'>
-      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-      </div>
+
         </>
       ) : (
         <>

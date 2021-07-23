@@ -7,14 +7,10 @@ import AdminNav from "../../components/AdminNav";
 import firebase, { storage } from "../../components/Firebase";
 import { selectUser } from "../../features/userSlice";
 
-function StudServices() {
+function GalleryImageUpload() {
 
-    const [dogName, setDogName] = useState("");
     const [image, setImage] = useState("");
     const [imagePreview, setImagePreview] = useState(null);
-    const [actualPrice, setActualPrice] = useState("");
-    const [offerPrice, setOfferPrice] = useState("");
-    const [description, setDescription] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [uploadError,setUploadError]=useState('')
@@ -58,16 +54,14 @@ function StudServices() {
   };
 
 
-  const addStudDog = (e) => {
+  const uploadGalleryImage = (e) => {
     e.preventDefault();
     setLoading(true);
 
-  const now = new Date().getTime()
+    const now = new Date().getTime()
     setTimeStamp(-1*(now))
-    // console.log(now);
-    // console.log(timeStamp);
 
-    const uploadTask = storage.ref(`stud_dog_images/${dateTime+'-'+image.name}`).put(image);
+    const uploadTask = storage.ref(`gallery_images/${dateTime+'-'+image.name}`).put(image);
     console.log(dateTime+'-'+image.name);
     uploadTask.on(
       "state_change",
@@ -85,34 +79,26 @@ function StudServices() {
       },
       () => {
         storage
-          .ref("stud_dog_images")
+          .ref("gallery_images")
           .child(dateTime+'-'+image.name)
           .getDownloadURL()
           .then((url) => {
             console.log(url);
-            const data = firebase.database().ref(`studDogDetails/`);
-            const productDetails = {
-                dog_name: dogName,
-              actual_price: actualPrice,
-              offer_price: offerPrice,
-              description:description,
+            const data = firebase.database().ref(`galleryImageDetails/`);
+            const imageData= {
               url: url,
               timeStamp:(-1*(new Date().getTime())),
             };
-            data.push(productDetails);
+            data.push(imageData);
           });
-        setLoading(false);
-        setDogName("");
-        setActualPrice("");
-        setOfferPrice("")
-        setDescription('')
+        setLoading(false)
         setImage(null);
         setError("");
         setUploadError('')
         setProgress(null);
         setSuccess("");
         setImagePreview(null)
-        toast.success("Product added successfully !", {
+        toast.success("image upload successfully !", {
           position: "top-right",
           autoClose: 7000,
           hideProgressBar: false,
@@ -127,47 +113,13 @@ function StudServices() {
     return (
         <>
          <AdminNav/>      <h1 className="text-center p-3 mt-10 underline font-semibold font-mono text-xl text-gray-500">
-        Add Dog for Stud.
+      Upload image for gallery.
       </h1>
 
       {success && <p>{success}</p>}
 {uploadError && <p className="w-full max-w-xl mx-auto grid bg-red-200 p-2 mt-4 rounded-md text-red-600 font-semibold font-mono">{uploadError}</p>}
-      <form onSubmit={addStudDog}>
+      <form onSubmit={uploadGalleryImage}>
         <div className="grid md:grid-cols-2 max-w-xl mx-auto gap-4 mt-8 p-2 ">
-        <input
-            className="w-full border-2 border-gray-500 p-2 rounded-md text-gray-500 bg-transparent placeholder-current font-mono font-semibold focus:outline-none focus:shadow-md"
-            type="text"
-            placeholder="Name"
-            name="type"
-            required
-            onChange={(e) => setDogName(e.target.value)}
-            value={dogName}
-          />
-          <input
-            className="w-full border-2 border-gray-500 p-2 rounded-md text-gray-500 bg-transparent placeholder-current font-mono font-semibold focus:outline-none focus:shadow-md"
-            type="number"
-            placeholder="Actual price (in INR)"
-            name="price"
-            required
-            onChange={(e) => setActualPrice(e.target.value)}
-            value={actualPrice}
-          />
-            <input
-            className="w-full border-2 border-gray-500 p-2 rounded-md text-gray-500 bg-transparent placeholder-current font-mono font-semibold focus:outline-none focus:shadow-md"
-            type="number"
-            placeholder="Offer price (in INR)"
-            name="price"
-            onChange={(e) => setOfferPrice(e.target.value)}
-            value={offerPrice}
-          />
-               <input
-            className="w-full border-2 border-gray-500 p-2 rounded-md text-gray-500 bg-transparent placeholder-current font-mono font-semibold focus:outline-none focus:shadow-md"
-            type="tex"
-            placeholder="Description"
-            name="description"
-            onChange={(e) => setDescription(e.target.value)}
-            value={description}
-          />
           
           <input
             className={`w-full p-2 rounded-md placeholder-current font-mono font-semibold focus:outline-none focus:shadow-md ${
@@ -222,7 +174,7 @@ function StudServices() {
                 type="submit"
                 className="w-full max-w-xl mx-auto grid p-2 m-6 rounded-md dark:bg-gray-800 bg-gray-300 text-gray-600 dark:text-gray-500 font-semibold font-mono"
               >
-                ADD
+                Upload
               </button>
             ))}
        </div>
@@ -231,4 +183,5 @@ function StudServices() {
     )
 }
 
-export default StudServices
+export default GalleryImageUpload
+ 
