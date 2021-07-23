@@ -23,7 +23,7 @@ function ProductSell() {
   const [progress, setProgress] = useState(null);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
-  const fileType = ["image/png", "image/jpg", "image/jpeg"];
+  const fileType = [ "image/jpg", "image/jpeg"];
   const admin = useSelector(selectUser);
   if (!admin) {
     history.push("/");
@@ -56,7 +56,7 @@ function ProductSell() {
       //console.log(displayPreview.readAsDataURL(selectedImage));
       setError("");
     } else {
-      setError("Please select a png/jpg/jpeg file");
+      setError("Please select a jpg/jpeg file");
       setImage("");
     }
   };

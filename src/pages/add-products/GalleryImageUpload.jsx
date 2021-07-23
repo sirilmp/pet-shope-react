@@ -17,7 +17,7 @@ function GalleryImageUpload() {
     const [success, setSuccess] = useState("");
     const [progress, setProgress] = useState(null);
     const history = useHistory();
-    const fileType = ["image/png", "image/jpg", "image/jpeg"];
+    const fileType = [ "image/jpg", "image/jpeg"];
 
     const admin = useSelector(selectUser);
     if (!admin) {
@@ -47,7 +47,7 @@ function GalleryImageUpload() {
       //console.log(displayPreview.readAsDataURL(selectedImage));
       setError("");
     } else {
-      setError("Please select a png/jpg/jpeg file");
+      setError("Please select a jpg/jpeg file");
       setImage("");
     }
   };
