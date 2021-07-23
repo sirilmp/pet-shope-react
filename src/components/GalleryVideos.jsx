@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import firebase, { db } from "./Firebase";
+import firebase from "./Firebase";
 import GalleryVideo from "./GalleryVideo";
 
 function VideoGallery() {

@@ -21,7 +21,6 @@ function PuppiesSell() {
   const [success, setSuccess] = useState("");
   const [progress, setProgress] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [timeStamp,setTimeStamp]=useState('')
   const history = useHistory();
   const admin = useSelector(selectUser);
   const fileType = ["image/png", "image/jpg", "image/jpeg"];
@@ -63,8 +62,6 @@ function PuppiesSell() {
   const addPappiesSell = (e) => {
     e.preventDefault();
     setLoading(true);
-    const now = new Date().getTime()
-    setTimeStamp(-1*(now))
 
     const uploadTask = storage.ref(`puppies_images/${dateTime+'-'+image.name}`).put(image);
     uploadTask.on(

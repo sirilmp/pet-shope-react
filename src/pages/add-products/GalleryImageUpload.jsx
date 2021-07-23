@@ -16,7 +16,6 @@ function GalleryImageUpload() {
     const [uploadError,setUploadError]=useState('')
     const [success, setSuccess] = useState("");
     const [progress, setProgress] = useState(null);
-    const [timeStamp,setTimeStamp]=useState('')
     const history = useHistory();
     const fileType = ["image/png", "image/jpg", "image/jpeg"];
 
@@ -57,9 +56,6 @@ function GalleryImageUpload() {
   const uploadGalleryImage = (e) => {
     e.preventDefault();
     setLoading(true);
-
-    const now = new Date().getTime()
-    setTimeStamp(-1*(now))
 
     const uploadTask = storage.ref(`gallery_images/${dateTime+'-'+image.name}`).put(image);
     console.log(dateTime+'-'+image.name);
